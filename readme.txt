@@ -1,0 +1,18 @@
+=== Category Description Widget ===
+Contributors: nemovrusso
+Requires at least: 3.0
+Tested up to: 5.5.2
+Stable tag: 0.1
+License: GPL2
+Tags: Category, Taxonomy, Tags, Widget
+
+A WordPress widget showing the description of the first category in the single post currently being displayed.
+
+== Description ==
+
+A WordPress widget showing the description of the first category in the single post currently being displayed.
+
+== Changelog ==
+= 0.1 =
+
+First release.
