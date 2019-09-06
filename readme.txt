@@ -2,7 +2,7 @@
 Contributors: nemovrusso
 Requires at least: 3.0
 Tested up to: 5.2.3
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPL2
 Tags: Category, Taxonomy, Tags, Widget
 
@@ -24,3 +24,7 @@ Rename main file.
 = 0.3 =
 
 Fix Readme.
+
+= 0.4 =
+
+Fix version.
