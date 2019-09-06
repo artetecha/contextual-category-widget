@@ -3,7 +3,7 @@
 Plugin Name: Contextual Category Widget
 Plugin URI: https://github.com/artetecha.com
 Description: A WordPress widget showing the description of the first category in the single post currently being displayed.
-Version: 0.5.1
+Version: 0.6
 Author: Vincenzo Russo
 Author URI: https://artetecha.com
 License: GPL2
@@ -35,33 +35,56 @@ class Contextual_Category_Widget extends WP_Widget {
     }
 
     public function widget( $args, $instance ) {
+
+        // The widget is meant only for single articles.
         if ( !is_single() ) {
             return false;
         }
+
+        // Get the categories.
         $cats = get_the_category();
-        extract( $args );
-        echo $before_widget;
+
+        // We only look at the first category on the article at this stage.
+        // If this has no description, we don't display the widget.
+        if ( empty( $cats[0]->category_description ) ) {
+            return;
+        }
+
+        echo $args['before_widget'];
+
+        // Widget main output.
+        $text = '';
+
+        // The title of the widget is the category's name.
         $title = $cats[0]->name;
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
+        // Add the title to the text.
         if ( $title ) {
-			echo $args['before_title'] . $title . $args['after_title'];
-		}
+			$text .= $args['before_title'] . $title . $args['after_title'];
+        }
+
+        // Apply filters to the text.
+        $text .= apply_filters( 'widget_text', $cats[0]->category_description, $instance, $this );
+
 ?>
         <div class="textwidget">
 <?php
-        $text = $cats[0]->category_description;
-        $text = apply_filters( 'widget_text', $text, $instance, $this );
+        // Output the widget wrapped into a div with class 'textwidget'.
+        // We currently think it is sensible to reuse that class, as the output
+        // of this widget would be very much like that of a Text Widget.
         echo $text;
 ?>
         </div>
 <?php
-        echo $after_widget;
+        echo $args['after_widget'];
     }
 }
 
+// Init handler.
 function contextual_category_widget_init(){
     register_widget('Contextual_Category_Widget');
 }
 
-
+// Init widget.
 add_action( 'widgets_init', 'contextual_category_widget_init');
