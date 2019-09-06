@@ -1,8 +1,8 @@
-=== Category Description Widget ===
+=== Contextual Category Widget ===
 Contributors: nemovrusso
 Requires at least: 3.0
-Tested up to: 5.5.2
-Stable tag: 0.2
+Tested up to: 5.2.3
+Stable tag: 0.3
 License: GPL2
 Tags: Category, Taxonomy, Tags, Widget
 
@@ -20,3 +20,7 @@ First release.
 = 0.2 =
 
 Rename main file.
+
+= 0.3 =
+
+Fix Readme.
