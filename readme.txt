@@ -2,7 +2,7 @@
 Contributors: nemovrusso
 Requires at least: 3.0
 Tested up to: 5.5.2
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPL2
 Tags: Category, Taxonomy, Tags, Widget
 
@@ -16,3 +16,7 @@ A WordPress widget showing the description of the first category in the single p
 = 0.1 =
 
 First release.
+
+= 0.2 =
+
+Rename main file.
