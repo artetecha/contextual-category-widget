@@ -2,7 +2,7 @@
 Contributors: nemovrusso
 Requires at least: 3.0
 Tested up to: 5.2.3
-Stable tag: 0.4
+Stable tag: 0.5
 License: GPL2
 Tags: Category, Taxonomy, Tags, Widget
 
@@ -28,3 +28,7 @@ Fix Readme.
 = 0.4 =
 
 Fix version.
+
+= 0.5 =
+
+Wrap output in a div with class 'textwidget'.
