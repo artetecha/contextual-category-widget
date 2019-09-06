@@ -2,7 +2,7 @@
 Contributors: nemovrusso
 Requires at least: 3.0
 Tested up to: 5.2.3
-Stable tag: 0.6
+Stable tag: 0.6.1
 License: GPL2
 Tags: Category, Taxonomy, Tags, Widget
 
@@ -40,3 +40,7 @@ Fix div wrapping.
 = 0.6 =
 
 Do not display the widget when there is no description for the article's first category.
+
+= 0.6.1 =
+
+Fix formatting.

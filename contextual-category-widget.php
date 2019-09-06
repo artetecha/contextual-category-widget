@@ -3,7 +3,7 @@
 Plugin Name: Contextual Category Widget
 Plugin URI: https://github.com/artetecha.com
 Description: A WordPress widget showing the description of the first category in the single post currently being displayed.
-Version: 0.6
+Version: 0.6.1
 Author: Vincenzo Russo
 Author URI: https://artetecha.com
 License: GPL2
@@ -65,7 +65,7 @@ class Contextual_Category_Widget extends WP_Widget {
         }
 
         // Apply filters to the text.
-        $text .= apply_filters( 'widget_text', $cats[0]->category_description, $instance, $this );
+        $text .= apply_filters( 'widget_text', '<p>' . $cats[0]->category_description . '</p>', $instance, $this );
 
 ?>
         <div class="textwidget">
