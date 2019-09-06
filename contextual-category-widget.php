@@ -3,7 +3,7 @@
 Plugin Name: Contextual Category Widget
 Plugin URI: https://github.com/artetecha.com
 Description: A WordPress widget showing the description of the first category in the single post currently being displayed.
-Version: 0.3
+Version: 0.4
 Author: Vincenzo Russo
 Author URI: https://artetecha.com
 License: GPL2
