@@ -41,15 +41,17 @@ class Contextual_Category_Widget extends WP_Widget {
         $cats = get_the_category();
         extract( $args );
         echo $before_widget;
-?>
-        <div class="textwidget">
-<?php
         $title = $cats[0]->name;
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
         if ( $title ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
-        echo $cats[0]->category_description;
+?>
+        <div class="textwidget">
+<?php
+        $text = $cats[0]->category_description;
+        $text = apply_filters( 'widget_text', $text, $instance, $this );
+        echo $text;
 ?>
         </div>
 <?php
